@@ -6,7 +6,10 @@ class Main {
    System.out.println("What is your name?");
     String name = scan.next();
    
-   y
+   System.out.println("Is it raining?");
+    Boolean rain = scan.next();
+
+   System.out.println(forecast(name));
 
    static boolean weather(boolean rain) 
   {
@@ -22,7 +25,7 @@ class Main {
 
   static String forecast(String name) 
   {
-    String forecast = "It is raining out side " + name
+    String forecast = "It is raining out side " + name;
     return forecast;
   }
   }
