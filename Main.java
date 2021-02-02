@@ -1,38 +1,45 @@
 import java.util.Scanner; //scanner added 
-class Main 
-{
-  public static void main(String[] args) 
-  {
-   Scanner scan = new Scanner(System.in);
-   
-   System.out.println("What is your name?");
-    String name = scan.next();//asking users name
-   
-   System.out.println("Is it raining? True/False");
-    Boolean rain = scan.nextBoolean(); //asking user if it's raining
-   
-   System.out.println(weather(rain));
-   System.out.println(day(name));//calling the methods
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+
+    System.out.println("What is your name?");
+    String name = scan.next();// asking users name
+
+    System.out.println("Is it raining? True/False");
+    Boolean rain = scan.nextBoolean(); // asking user if it's raining
+
+    System.out.println("To find the average rainfall for the day, type the amount of rain in inches for the morning.");
+    int num1 = scan.nextInt();
+
+    System.out.println("Type the second number.");
+    int num2 = scan.nextInt();
+
+    System.out.println(weather(rain));
+     System.out.println(avgRain(num1, num2));
+    System.out.println(day(name));// calling the methods
 
   }
-   static boolean weather(boolean rain) //boolean method
+
+  static String weather(boolean rain) // string/boolean method
   {
-    if(rain)  
-    {
-      System.out.println("Get inside!");//prints if its raining
-      return true;
-    }
-    else
-    {
-      System.out.println("Continue on!");//prints if its not raining
-      return false;
+    if (rain) {
+      return "Get inside!";// prints if its raining
+    } else {
+      return "Continue on!";// prints if its not raining
     }
   }
 
-  static String day(String name) //string method
+  static int avgRain(int num1, int num2) //int method
   {
-    String forecast = "Have a great day " + name + "!";
-    return forecast;//prints at the end
+    int avgRain = (num1 + num2) / 2; //prints avgerage rainfall 
+    return avgRain;
   }
-  
+
+  static String day(String name) // string method
+  {
+    return "Have a great day " + name + "!";// prints at the end
+  }
+
 }
