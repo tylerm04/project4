@@ -13,18 +13,18 @@ class Main {
     System.out.println("To find the average rainfall for the day, type the amount of rain in inches for the morning.");
     int num1 = scan.nextInt();
 
-    System.out.println("Type the second number.");
+    System.out.println("Type the amount of rainfall for the afternoon.");
     int num2 = scan.nextInt();
 
     System.out.println(weather(rain));
-     System.out.println(avgRain(num1, num2));
+    System.out.println("The avergae amount of rainfall is " + avgRain(num1, num2) + " inches");
     System.out.println(day(name));// calling the methods
 
   }
 
   static String weather(boolean rain) // string/boolean method
   {
-    if (rain) {
+    if (rain) {//if else statement
       return "Get inside!";// prints if its raining
     } else {
       return "Continue on!";// prints if its not raining
